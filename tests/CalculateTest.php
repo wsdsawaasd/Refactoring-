@@ -6,10 +6,10 @@
  * Time: 23:43
  */
 
-require __DIR__ . "/../src/Calculator.php";
-use PHPUnit\Framework\TestCase;
+require __DIR__ . "/../src/Calculate.php";
 
-class CalculatorTest extends TestCase
+
+class CalculateTest extends Calculate
 {
     public function testCalculateAdd()
     {
@@ -19,11 +19,8 @@ class CalculatorTest extends TestCase
 
         $expected = 2;
 
-        $calculator = new Calculator();
+        $calculator = new Calculate();
         $result = $calculator->calculate($a, $b, $o);
         $this->assertEquals($expected, $result);
     }
-
-
-
 }
